@@ -5,10 +5,11 @@ import cucumber.api.java.pt.Então;
 
 public class CadastroNaLivraria {
 
+	
 	@Dado("^que o  usuário se cadastra$")
 	public void que_o_usuário_se_cadastra() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   // throw new PendingException();
 	}
 
 	@Dado("^o usuário se loga$")
