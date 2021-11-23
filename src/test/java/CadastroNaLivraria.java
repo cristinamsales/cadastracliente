@@ -1,46 +1,51 @@
-import cucumber.api.PendingException;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Então;
 
 public class CadastroNaLivraria {
 
-	
 	@Dado("^que o  usuário se cadastra$")
-	public void que_o_usuário_se_cadastra() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	   // throw new PendingException();
+	public void queOUsuárioSeCadastra() throws Throwable {
+		System.out.println("qualquer coisa");
 	}
 
 	@Dado("^o usuário se loga$")
-	public void o_usuário_se_loga() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public void oUsuárioSeLoga() throws Throwable {
 	}
 
 	@Dado("^o usuário tem acesso a livraria$")
-	public void o_usuário_tem_acesso_a_livraria() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public void oUsuárioTemAcessoALivraria() throws Throwable {
 	}
 
 	@Dado("^pode incluir o livro na sua coleção e remover o livro  da coleção$")
-	public void pode_incluir_o_livro_na_sua_coleção_e_remover_o_livro_da_coleção() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public void podeIncluirOLivroNaSuaColeçãoERemoverOLivroDaColeção() throws Throwable {
 	}
 
 	@Quando("^remover o livro$")
-	public void remover_o_livro() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public void removerOLivro() throws Throwable {
 	}
 
 	@Então("^saira da Livraria$")
-	public void saira_da_Livraria() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public void sairaDaLivraria() throws Throwable {
+	}
+	
+	private int livraria = 0;
+	
+	@Dado("^que o valor da livraria é (\\d+)$")
+	public void queOValorDaLivrariaÉ(int arg1) throws Throwable {
+	   livraria = arg1; 
 	}
 
+	@Quando("^eu incrementar em (\\d+)$")
+	public void euIncrementarEm(int arg1) throws Throwable {
+	    livraria = livraria + arg1;
+	}
+
+	@Então("^o valor da livraria sera (\\d+)$")
+	public void oValorDaLivrariaSera(int arg1) throws Throwable {
+	    System.out.println(arg1);
+	    System.out.println(livraria);
+	    
+	}
 
 }

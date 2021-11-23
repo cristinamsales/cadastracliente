@@ -13,3 +13,9 @@ Cenário: Deve castrar o usuário na livraria
   Quando remover o livro
   Então saira da Livraria 
   
+Cenário: Deve incrementar livraria
+ Dado que o valor da livraria é 15
+ Quando eu incrementar em 5
+ Então o valor da livraria sera 18
+ 
+  
